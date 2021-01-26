@@ -1,4 +1,4 @@
-class storage <T>{
+class storage <T extends string | number | boolean>{
     private data: T[] = []
     addItem(item: T){
         this.data.push(item)
@@ -18,3 +18,5 @@ stringData.addItem("item1")
 stringData.addItem("item2")
 // stringData.addItem(3)
 console.log(stringData.getData())
+
+// const objData = new storage<object>()
